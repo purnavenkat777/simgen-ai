@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-slate-200;
+  }
+}
+
+/* Custom Range Input Styling */
+input[type='range']::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 bg-emerald-500 rounded-full cursor-pointer shadow-lg shadow-emerald-500/50 border-2 border-white transition-transform hover:scale-110 active:scale-95;
+}
+
+input[type='range']::-moz-range-thumb {
+  @apply w-4 h-4 bg-emerald-500 rounded-full cursor-pointer shadow-lg shadow-emerald-500/50 border-2 border-white transition-transform hover:scale-110 active:scale-95;
+}
